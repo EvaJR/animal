@@ -1,6 +1,7 @@
 package com.capgemini.animals;
 
 import java.util.Scanner; // password check
+// more comments
 
 public class StringComparison {
 
