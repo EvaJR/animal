@@ -6,7 +6,7 @@ public class SubClass extends SuperClass {
         SuperClass.hello();
 
     }
-   
+
     public static void hello()
     {
         System.out.println( "Hello from the Sub Class" );
