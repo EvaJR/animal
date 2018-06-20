@@ -1,13 +1,38 @@
 package com.capgemini.animals.weekdays;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyFirstEnumApp {
-    public static void main(String[] args) {
+
+    public static List<Student> students = new ArrayList<>();
+
+    public void addStudentToList(String name, WeekDay favourite, WeekDay leastFavourite) {
+
+
+
         Student student = new Student();
+        student.setName(name);
+        student.setMyFavouriteWeekday(favourite);
+        student.setMyLeastFavouriteWeekday(leastFavourite);
 
-        student.setName("Eva");
-        student.setMyFavouriteWeekday(WeekDay.SATURDAY);
-        student.setMyLeastFavouriteWeekday(WeekDay.MONDAY);
+        students.add(student);
 
-        System.out.println(student);
+    }
+
+
+    public static void main(String[] args) {
+
+        for(WeekDay elementOfWeekDays : WeekDay.values()) {
+            System.out.println(elementOfWeekDays);
+        }
+
+        addStudentToList("Eva", WeekDay.SATURDAY, WeekDay.MONDAY );
+        addStudentToList("Rachid", WeekDay.FRIDAY, WeekDay.MONDAY );
+        addStudentToList("Raymond", WeekDay.SUNDAY, WeekDay.MONDAY );
+
+        for(Student student : students) {
+            System.out.println(student);
+        }
     }
 }
