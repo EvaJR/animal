@@ -7,7 +7,7 @@ public class MyFirstEnumApp {
 
     public static List<Student> students = new ArrayList<>();
 
-    public void addStudentToList(String name, WeekDay favourite, WeekDay leastFavourite) {
+    public static void addStudentToList(String name, WeekDay favourite, WeekDay leastFavourite) {
 
 
 
